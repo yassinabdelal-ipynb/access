@@ -20,7 +20,7 @@ Everything runs on your computer. The extension talks only to a small local serv
 You need [Node.js](https://nodejs.org) 20 or newer and Chrome or Edge.
 
 ```bash
-git clone https://github.com/<you>/access.git
+git clone https://github.com/yassinabdelal-ipynb/access.git
 cd access
 npm install
 node server.mjs
