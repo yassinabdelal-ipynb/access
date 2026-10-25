@@ -1,0 +1,6 @@
+# Only needed for Head control (Motor impairment mode). Windows only: it moves the desktop mouse.
+# Python 3.10 to 3.12 is recommended. Install with:  python -m pip install -r requirements.txt
+mediapipe==0.10.21
+numpy>=1.26,<2
+opencv-python>=4.8,<4.12
+pillow>=10

@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Access - your web, your way</title>
+  <meta name="description" content="Access redesigns the web page you are on, in place, for focus, for head and eye control, and for screen readers. Nothing on the page is dropped.">
+  <link rel="icon" href="/extension/icons/icon.svg" type="image/svg+xml">
+  <script>
+    try { document.documentElement.dataset.theme = JSON.parse(localStorage.getItem('access-preferences') || '{}').theme || 'auto'; } catch {}
+  </script>
+  <link rel="stylesheet" href="/app/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <div class="wrap bar">
+      <a class="brand" href="/"><span class="mark" aria-hidden="true"><svg viewBox="16 12 96 100" aria-hidden="true"><circle cx="64" cy="27" r="11" fill="currentColor"/><path d="M26 49c13 5 26 7 38 7s25-2 38-7M64 56v24M64 80 47 106M64 80l17 26" fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="name">Access</span></a>
+      <nav aria-label="Main">
+        <a href="#tracks">Tracks</a>
+        <a href="#motor">Head control</a>
+        <a href="#how">How it works</a>
+        <a href="#ai">AI and privacy</a>
+        <a href="#try">Try it</a>
+        <a href="#install">Install</a>
+      </nav>
+      <div class="segment" role="group" aria-label="Theme" id="themes">
+        <button type="button" data-theme-choice="auto" aria-label="Match system theme">Auto</button>
+        <button type="button" data-theme-choice="light" aria-label="Light theme">Light</button>
+        <button type="button" data-theme-choice="dark" aria-label="Dark theme">Dark</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap">
+      <div class="hero-text">
+        <h1>Any web page, rebuilt for the way you use it.</h1>
+        <p class="lede">Access redesigns the page you are on, in place: calmer for focus, larger and steadier for head and eye control, clearer for screen readers. Nothing on the page is dropped.</p>
+        <p class="actions"><a class="btn primary" href="#try">Try it</a><a class="btn" href="#install">Install</a></p>
+      </div>
+      <figure class="pair" aria-label="The same page, original and redesigned">
+        <div><img src="/app/assets/original.jpg" alt="A report page as its site shows it: small type, a narrow chart, a plain table." width="1280" height="760"><figcaption>Original</figcaption></div>
+        <div><img src="/app/assets/designed.jpg" alt="The same page redesigned: a brand-coloured header, a large title, readable text and the chart beside it." width="1280" height="760"><figcaption>With Access</figcaption></div>
+      </figure>
+    </section>
+
+    <section class="facts wrap" aria-label="At a glance">
+      <div><b>3</b><span>tracks: Focus, Motor impairment, Screen reader</span></div>
+      <div><b>0</b><span>camera pictures leave the head-mouse program</span></div>
+      <div><b>3000</b><span>items read from a page, with nothing dropped on purpose</span></div>
+      <div><b>15</b><span>automated test suites, all passing</span></div>
+    </section>
+
+    <section class="wrap block" id="keeps">
+      <h2>Everything on the page stays.</h2>
+      <p class="sub">The scan reads a page like a person does, then lays it out again in the site's own colours and fonts.</p>
+      <div class="cols">
+        <article class="card"><h3>Text keeps its links</h3><p>A sentence with a link in it stays one sentence, with the link, bold and italics in place.</p></article>
+        <article class="card"><h3>Charts, figures and tables</h3><p>Inline SVG and canvas charts, pictures that are links, captions, and data tables with their header and rows.</p></article>
+        <article class="card"><h3>Quotes, code and media</h3><p>Quotes and code blocks are kept. Video, audio and frames show as a clear card that leads back to the original.</p></article>
+        <article class="card"><h3>The site's own look</h3><p>Brand colour, fonts, logo and buttons carry over. Light and Dark restyle the page itself.</p></article>
+      </div>
+      <figure class="shot wide"><img src="/app/assets/designed-dark.jpg" alt="The redesigned report page in Dark: light text on a dark background, the chart with its caption and the table below." width="1280" height="760" loading="lazy"><figcaption>The same page in Dark.</figcaption></figure>
+    </section>
+
+    <section class="wrap block" id="tracks">
+      <h2>Three tracks, one engine.</h2>
+      <div class="tracks">
+        <article class="card track">
+          <img src="/app/assets/focus-slide.jpg" alt="A focus slide that shows only the data table, with Back, Sections and Next controls." width="1280" height="760" loading="lazy">
+          <h3>Focus</h3>
+          <p class="who">ADHD, anxiety, fatigue</p>
+          <ul>
+            <li>The page becomes slides: about 50 words under a heading, a picture with its description, a form kept together, a table or chart on its own.</li>
+            <li>A progress bar, minutes left, a Sections menu and arrow keys.</li>
+            <li>A reading line that dims everything except a band at the pointer.</li>
+            <li>Optional AI plan: Claude can mark the main content, tuck away distractions (never charts, tables or code), fold side content, add headings and one-line gists.</li>
+          </ul>
+        </article>
+        <article class="card track">
+          <img src="/app/assets/tiles.jpg" alt="Big tiles for head control: Site menu, Welcome, Quick actions, Reading groups and Join the library, each with a title, subtitle and counts." width="1280" height="760" loading="lazy">
+          <h3>Motor impairment</h3>
+          <p class="who">Head or eye control, limited fine motor skill</p>
+          <ul>
+            <li>Head control with a 3-second right-eye wink or dwell to click.</li>
+            <li>Whole page with larger text and targets, or big tiles and short steps with nothing to scroll.</li>
+            <li>On-screen keyboard, scroll zones that speed up toward the edge, option cards, safe-first confirmations, a Rest mode.</li>
+            <li>A live face mask shows what the tracker sees. No camera picture is shown or sent.</li>
+          </ul>
+        </article>
+        <article class="card track">
+          <img src="/app/assets/reader.jpg" alt="The screen reader view: a plain, ordered page with a heading, the paragraph, the chart with its caption and the table." width="1280" height="760" loading="lazy">
+          <h3>Screen reader</h3>
+          <p class="who">Blind and low-vision users</p>
+          <ul>
+            <li>Real landmarks (banner, navigation, search, main, footer), one h1, headings with no skipped levels and skip links.</li>
+            <li>Links with a clear purpose, named icon buttons, real tables with captions and column headers.</li>
+            <li>Optional image descriptions written by Claude's vision, marked as automatic.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap block" id="motor">
+      <h2>Built for head control.</h2>
+      <div class="split">
+        <figure class="shot"><img src="/app/assets/motor-whole.jpg" alt="The motor toolbar with Head control, Mouse or trackpad, Big tiles and Advanced, the wink meter and the live face mask, above the redesigned page and the scroll zones." width="1280" height="760" loading="lazy"><figcaption>Toolbar, face mask and scroll zones on the whole page.</figcaption></figure>
+        <ul class="feature-list">
+          <li><b>One head only.</b> It follows the nearest head first, then that same head. Someone walking in, even nearer, never takes over.</li>
+          <li><b>Runs in the background.</b> No window opens when tracking starts.</li>
+          <li><b>Dwell click.</b> A ring fills at the pointer. Hovering alone never acts, and a click or wink replaces a running dwell.</li>
+          <li><b>Big tiles.</b> Menu and tiny sections are merged, every tile says what is inside, and Claude can write clearer titles.</li>
+          <li><b>Short steps.</b> About one field or two buttons at a time. After a button runs, you are taken to the result.</li>
+          <li><b>Keyboard and scrolling.</b> A large on-screen keyboard that never types on hover, and scroll zones that get faster toward the screen edge.</li>
+          <li><b>Safe by default.</b> Option cards instead of tiny dropdowns, "No, go back" first in every confirmation, Rest to pause everything.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="wrap block" id="how">
+      <h2>How it works.</h2>
+      <ol class="steps">
+        <li><h3>Scan</h3><p>The page is read into plain data: text with its links, pictures and charts, tables, fields, buttons, landmarks and the site's look.</p></li>
+        <li><h3>Design</h3><p>A header, hero, reading column, side rail and footer are drawn in the site's colours. Each track then adapts it.</p></li>
+        <li><h3>Plan (optional)</h3><p>With your consent, Claude labels what each stretch is for and names tiles. It can only choose among fixed designs and cannot reword anything.</p></li>
+        <li><h3>Act</h3><p>Typing, clicks and submits go straight to the original page, which stays alive underneath. Close Access and it is exactly as you left it.</p></li>
+      </ol>
+    </section>
+
+    <section class="wrap block" id="ai">
+      <h2>AI and privacy.</h2>
+      <div class="two">
+        <article class="card">
+          <h3>What Claude may do</h3>
+          <ul>
+            <li>Mark the main content and name what each stretch is for.</li>
+            <li>Hide distractions that you can bring back, and fold side content.</li>
+            <li>Add short headings and one-line summaries of long text.</li>
+            <li>Write titles and subtitles for the big tiles.</li>
+            <li>Describe pictures for screen readers.</li>
+          </ul>
+          <p class="note">It can never touch fields or submit buttons, and each rulebook is a plain file in <code>server/policies</code>.</p>
+        </article>
+        <article class="card">
+          <h3>What stays private</h3>
+          <ul>
+            <li>The key lives only in a local <code>.env</code> and never in the extension.</li>
+            <li>Field values and passwords are never sent, only short labels and snippets, and only after you agree.</li>
+            <li>Camera pictures stay inside the head-mouse program. Only landmark numbers reach the page.</li>
+            <li>The Apify agent, if you switch it on, gets only the page's web address without anything after a ? or #, only after you agree, and only for public sites.</li>
+            <li>The server only answers this computer, and AI plans are limited to 40 an hour.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap block" id="try">
+      <h2>Try it here.</h2>
+      <p class="sub">Left: the original. Right: Access. Both use the engine from the extension, so a field you fill in on the right changes on the left.</p>
+      <div class="workspace">
+        <section class="pane" aria-label="Original page">
+          <div class="pane-title"><span>Original</span><a href="/app/demo.html" target="_blank" rel="noopener">Open separately &#8599;</a></div>
+          <iframe id="demo" src="/app/demo.html" title="Practice event registration website"></iframe>
+        </section>
+        <section class="pane" id="adapted" aria-label="Access view">
+          <div class="pane-title"><span>Access</span><button type="button" id="expand" class="mini" aria-pressed="false">Full screen</button></div>
+          <div id="preview"></div>
+          <button type="button" id="reopen" class="btn" hidden>Reopen Access view</button>
+        </section>
+      </div>
+    </section>
+
+    <section class="wrap block" id="install">
+      <div class="two">
+        <div>
+          <h2>Install.</h2>
+          <p class="sub">The extension runs in Chrome or Edge. Everything stays on this computer.</p>
+          <ol class="plain">
+            <li>Open <strong>chrome://extensions</strong> or <strong>edge://extensions</strong>.</li>
+            <li>Turn on <strong>Developer mode</strong>, then <strong>Load unpacked</strong>.</li>
+            <li>Choose the <code>extension</code> folder inside the Access folder you downloaded.</li>
+            <li>Open any site, click the Access icon, then <strong>Redesign page</strong>.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>Optional parts</h3>
+          <ul>
+            <li><b>AI:</b> put your Anthropic key in <code>.env</code> and run <code>node server.mjs</code>.</li>
+            <li><b>Head control:</b> start the same server. It launches the head-mouse program, which needs a webcam and its Python environment.</li>
+            <li><b>Apify agent:</b> put an Apify token in <code>.env</code> as <code>APIFY_TOKEN</code>. The <strong>AI redesign</strong> button then first reads the site's hidden menu and main pages with Apify, and Claude plans the redesign with that site map.</li>
+            <li><b>Without them</b> the redesign, Focus, and Screen reader structure still work.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap block" id="checked">
+      <h2>Checked, and what is not.</h2>
+      <div class="two">
+        <article class="card">
+          <h3>Checked</h3>
+          <ul>
+            <li>15 automated suites cover the page scan, every track, the toolbar, the tiles, the head-control bridge, the one-head rules, the Apify agent and the design tokens.</li>
+            <li>The real extension runs in Edge against real sites, including one live Claude call per feature.</li>
+            <li>Camera tracking and the face mask were checked on a live camera.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Not yet</h3>
+          <ul>
+            <li>Real screen readers and phones.</li>
+            <li>Two real people in front of the camera. The one-head rules are tested with simulated faces.</li>
+            <li>Charts that only draw after you interact, canvases from other sites and script-drawn widgets show as a card back to the original.</li>
+            <li>Gaze is research only. Head pointer with wink or dwell is the working input.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap foot"><span>Access, a local prototype</span><span>v0.3</span></footer>
+
+  <script src="/extension/engine.js"></script>
+  <script src="/extension/reader.js"></script>
+  <script src="/extension/motor.js"></script>
+  <script src="/extension/ui.js"></script>
+  <script src="/app/app.js"></script>
+</body>
+</html>

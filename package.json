@@ -1,0 +1,35 @@
+{
+    "name":  "access",
+    "version":  "0.3.0",
+    "description":  "Access rebuilds any web page, in place, for focus, motor access and screen readers. Chrome/Edge extension plus a small local server.",
+    "license":  "MIT",
+    "private":  true,
+    "type":  "module",
+    "engines":  {
+                    "node":  "\u003e=20"
+                },
+    "scripts":  {
+                    "start":  "node server.mjs",
+                    "test":  "node tests/browser.cjs",
+                    "test:extension":  "node tests/extension.cjs",
+                    "test:reader":  "node tests/reader.mjs \u0026\u0026 node tests/reader.cjs",
+                    "test:content":  "node tests/content.cjs",
+                    "test:chrome":  "node tests/chrome.cjs",
+                    "test:tiles":  "node tests/tiles.cjs",
+                    "test:site":  "node tests/site.cjs",
+                    "test:siteagent":  "node tests/site-agent.cjs",
+                    "test:apify":  "node tests/apify.mjs",
+                    "test:tokens":  "node tests/tokens.mjs",
+                    "tokens":  "node scripts/build-tokens.mjs",
+                    "tokens:from-figma":  "node scripts/sync-from-figma.mjs",
+                    "test:facelock":  "node tests/face-lock.mjs",
+                    "test:motor":  "node tests/motor.cjs \u0026\u0026 node tests/motor-board.cjs"
+                },
+    "dependencies":  {
+                         "@anthropic-ai/sdk":  "^1.3.0",
+                         "zod":  "^4.6.7"
+                     },
+    "devDependencies":  {
+                            "playwright":  "^1.64.1"
+                        }
+}

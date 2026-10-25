@@ -1,0 +1,35 @@
+{
+    "collection":  "Access Tokens",
+    "color":  {
+                  "light":  {
+                                "bg":  "#f6f7f9",
+                                "panel":  "#ffffff",
+                                "line":  "#d6dae1",
+                                "text":  "#15181d",
+                                "muted":  "#566070",
+                                "accent":  "#1d4ed8",
+                                "accent-ink":  "#ffffff",
+                                "focus":  "#1d4ed8",
+                                "danger":  "#b42318",
+                                "ok":  "#0f766e"
+                            },
+                  "dark":  {
+                               "bg":  "#15171c",
+                               "panel":  "#1e2128",
+                               "line":  "#373c48",
+                               "text":  "#eceef2",
+                               "muted":  "#a4acba",
+                               "accent":  "#7aa2ff",
+                               "accent-ink":  "#0d1117",
+                               "focus":  "#7aa2ff",
+                               "danger":  "#ff8a7a",
+                               "ok":  "#5eead4"
+                           }
+              },
+    "radius":  {
+                   "sm":  8,
+                   "md":  12,
+                   "lg":  14,
+                   "full":  999
+               }
+}

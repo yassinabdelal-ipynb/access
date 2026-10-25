@@ -1,0 +1,35 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  tests:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: npm ci
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+      - run: python -m pip install -r requirements.txt
+      - name: Offline checks
+        run: |
+          node tests/tokens.mjs
+          node tests/apify.mjs
+          node tests/reader.mjs
+          node tests/motor-bridge.mjs
+          node tests/face-lock.mjs
+      - name: Browser checks (Edge)
+        shell: bash
+        run: |
+          node server.mjs &
+          sleep 3
+          for t in browser chrome content reader tiles site site-agent motor motor-board; do
+            node tests/$t.cjs || exit 1
+          done

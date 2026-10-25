@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Harbour Climate Report</title>
+<style>
+  body { margin: 0; font: 16px/1.5 Georgia, serif; background: #fbfaf7; color: #1d2b2a; }
+  header.top { background: #0b3d3a; color: #fff; padding: 14px 32px; display: flex; gap: 24px; align-items: center; }
+  header.top a { color: #fff; }
+  main { max-width: 860px; margin: 0 auto; padding: 24px; }
+  .bar rect { fill: #0b3d3a; }
+  .bar text { font: 12px sans-serif; fill: #333; }
+  table.stats { border-collapse: collapse; }
+  table.stats th, table.stats td { border: 1px solid #bbb; padding: 4px 10px; }
+  footer { background: #eee; padding: 20px 32px; }
+</style>
+</head>
+<body>
+<header class="top"><strong>Harbour Institute</strong><nav><a href="#about">About</a> <a href="#data">Data</a> <a href="#method">Method</a></nav></header>
+<main>
+  <h1>Harbour Climate Report</h1>
+  <p>Sea levels around the harbour rose by <strong>3.4 mm</strong> a year, according to the <a href="#method">tide gauge record</a>, and the trend is <em>accelerating</em>.<sup><a href="#n1">[1]</a></sup></p>
+  <figure id="chartfig">
+    <svg class="bar" id="barchart" width="420" height="200" viewBox="0 0 420 200" role="img" aria-label="Bar chart of sea level rise by decade">
+      <rect x="20" y="120" width="60" height="70"></rect><rect x="110" y="90" width="60" height="100"></rect><rect x="200" y="60" width="60" height="130"></rect><rect x="290" y="30" width="60" height="160"></rect>
+      <text x="20" y="196">1990s</text><text x="110" y="196">2000s</text><text x="200" y="196">2010s</text><text x="290" y="196">2020s</text>
+    </svg>
+    <figcaption>Figure 1. Average yearly rise by decade, in millimetres.</figcaption>
+  </figure>
+  <h2 id="data">The numbers</h2>
+  <table class="stats">
+    <caption>Table 1. Tide gauge readings</caption>
+    <thead><tr><th>Decade</th><th>Rise (mm/yr)</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">1990s</th><td>1.9</td><td><a href="#n1">Gauge A</a></td></tr>
+      <tr><th scope="row">2000s</th><td>2.6</td><td>Gauge A</td></tr>
+      <tr><th scope="row">2010s</th><td>3.1</td><td>Gauge B</td></tr>
+      <tr><th scope="row">2020s</th><td>3.4</td><td>Gauge B</td></tr>
+    </tbody>
+  </table>
+  <blockquote>The harbour wall was designed for a sea that no longer exists.</blockquote>
+  <h2 id="method">How we measured</h2>
+  <p>Readings come from two gauges. Read the <a href="#n1">full method note</a> or compare them with the <a href="#data">table above</a>; values are rounded.</p>
+  <ul><li>Gauge A: 1990 to 2009</li><li>Gauge B: 2010 onwards, with <a href="#n1">a recalibration</a> in 2015</li></ul>
+  <pre>python analyse.py --gauge B --from 2010</pre>
+  <a href="#n1" id="photolink"><img id="photo" alt="The harbour wall at high tide" width="300" height="170" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='170'%3E%3Crect width='300' height='170' fill='%23468'/%3E%3C/svg%3E"></a>
+  <video id="clip" width="320" height="180" controls poster="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='180'%3E%3Crect width='320' height='180' fill='%23333'/%3E%3C/svg%3E" aria-label="Tide timelapse"></video>
+  <p id="n1">Note 1: sources are listed in the <a href="#data">data section</a>.</p>
+</main>
+<footer><p>Harbour Institute, 1 Quay Road. <a href="#about">Contact</a> · <a href="#method">Privacy</a></p></footer>
+</body>
+</html>

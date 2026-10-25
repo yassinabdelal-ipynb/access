@@ -1,0 +1,34 @@
+/* tokens:begin (generated from design/tokens.json by scripts/build-tokens.mjs; do not edit by hand) */
+:root {
+  color-scheme: light dark;
+  --bg: #f6f7f9;
+  --panel: #ffffff;
+  --line: #d6dae1;
+  --text: #15181d;
+  --muted: #566070;
+  --danger: #b42318;
+  --focus: #1d4ed8;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15171c;
+    --panel: #1e2128;
+    --line: #373c48;
+    --text: #eceef2;
+    --muted: #a4acba;
+    --danger: #ff8a7a;
+    --focus: #7aa2ff;
+  }
+}
+/* tokens:end */
+* { box-sizing: border-box; }
+body { width: 232px; margin: 0; padding: 14px; background: var(--bg); color: var(--text); font: 14px/1.4 "Segoe UI", system-ui, -apple-system, sans-serif; display: grid; gap: 12px; }
+header { display: flex; align-items: center; gap: 10px; font-weight: 650; font-size: 16px; }
+header img { display: block; border-radius: 50%; }
+button { min-height: 40px; border: 1px solid var(--text); border-radius: 8px; background: var(--text); color: var(--bg); font: 600 14px "Segoe UI", system-ui, sans-serif; cursor: pointer; }
+button:hover:not(:disabled) { background: color-mix(in srgb, var(--text) 85%, var(--bg)); }
+button:disabled { opacity: .6; cursor: default; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+#status { margin: 0; color: var(--danger); font-size: 13px; }
+a { color: var(--muted); font-size: 13px; text-decoration: none; justify-self: start; }
+a:hover { color: var(--text); text-decoration: underline; }header img { box-shadow: 0 0 0 1px var(--line); }

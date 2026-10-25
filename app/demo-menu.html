@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Greenfield Community Centre</title>
+<style>
+  body { margin: 0; font: 16px/1.5 system-ui, sans-serif; background: #f3f8ef; color: #1f3320; }
+  header { background: #2f6b34; color: #fff; padding: 12px 24px; display: flex; gap: 28px; align-items: center; }
+  header a { color: #fff; margin-right: 18px; }
+  .menu, .drop { list-style: none; margin: 0; padding: 0; display: flex; gap: 18px; }
+  .drop { display: none; }
+  .menu li:hover > .drop { display: block; }
+  main { max-width: 760px; margin: 0 auto; padding: 24px; }
+</style>
+</head>
+<body>
+<header>
+  <strong>Greenfield Community Centre</strong>
+  <nav aria-label="Main">
+    <ul class="menu">
+      <li><a href="/app/demo.html">Home</a></li>
+      <li><a href="#classes">Classes</a>
+        <ul class="drop"><li><a href="/app/demo-tiles.html">Gardening club</a></li><li><a href="/app/demo-rich.html">Art class</a></li></ul>
+      </li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <h1>Welcome to Greenfield</h1>
+  <p>Classes, clubs and a community garden for everyone in the neighbourhood. Most activities are free and open to all ages.</p>
+  <h2 id="classes">Classes</h2>
+  <p>Open the Classes menu at the top of the page to see every class and club we run each week.</p>
+  <h2 id="contact">Contact</h2>
+  <p>Visit us at 4 Garden Row, or ask at the front desk. The centre is open every day.</p>
+</main>
+</body>
+</html>

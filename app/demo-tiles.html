@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Riverside Library</title>
+<style>
+  body { margin: 0; font: 16px/1.5 system-ui, sans-serif; background: #fff4e5; color: #3b2a14; }
+  header { background: #b45309; color: #fff; padding: 12px 24px; }
+  header a { color: #fff; margin-right: 16px; }
+  main { max-width: 820px; margin: 0 auto; padding: 24px; }
+</style>
+</head>
+<body>
+<header><strong>Riverside Library</strong> <nav><a href="#hours">Opening hours</a><a href="#books">Find a book</a><a href="#join">Join</a><a href="#help">Help</a></nav></header>
+<main>
+  <h1>Welcome to Riverside Library</h1>
+  <p>Borrow books, use free computers and join our weekly reading groups. We are open every day of the week, and membership is free for residents.</p>
+  <h2>Renew your books</h2>
+  <button type="button" id="renew">Renew all</button>
+  <h2>Opening hours</h2>
+  <p>Open daily, 9:00 to 18:00.</p>
+  <h2>Report a problem</h2>
+  <button type="button" id="report">Report</button>
+  <h2>Reading groups</h2>
+  <p>Our reading groups meet on Tuesday and Thursday evenings in the quiet room. Each group chooses one book a month and talks about it over tea. New members are always welcome, and you do not need to have finished the book. Bring a friend if you like, or come on your own and meet new people.</p>
+  <p>The children's group meets on Saturday mornings with stories, songs and crafts for ages four to seven. Parents and carers stay with their children.</p>
+  <h2>Join the library</h2>
+  <form id="join-form">
+    <label for="fullname">Full name</label><input id="fullname" required>
+    <label for="mail">Email address</label><input id="mail" type="email" required>
+    <label for="card">Card type</label><select id="card"><option value="adult">Adult</option><option value="child">Child</option></select>
+    <button type="submit">Join now</button>
+  </form>
+</main>
+</body>
+</html>
