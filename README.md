@@ -2,6 +2,8 @@
 
 **Access rebuilds any web page, in place, so you can actually use it.** Click the Access icon in Chrome or Edge and the page you are on is replaced, in the same tab and at the same URL, by a redesigned version with the site's own colours, fonts, pictures and logo. Nothing on the page is thrown away, and you can get the original back with one click.
 
+Demo Video: https://youtu.be/lPBnF6skqYQ
+
 There are three modes, plus an optional AI button:
 
 | Mode | For | What it does |
