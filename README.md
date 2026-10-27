@@ -4,6 +4,7 @@
 
 Demo Video: https://youtu.be/lPBnF6skqYQ
 
+
 There are three modes, plus an optional AI button:
 
 | Mode | For | What it does |
